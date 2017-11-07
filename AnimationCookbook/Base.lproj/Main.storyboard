@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Layer Animation Cookbook-->
         <scene sceneID="Poq-Jv-bnk">
             <objects>
                 <tableViewController id="DbA-UQ-tWD" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eee-r9-349">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Layer Animation Properties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eee-r9-349">
                                                     <rect key="frame" x="8" y="8" width="326" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -104,38 +104,189 @@
                             <outlet property="delegate" destination="DbA-UQ-tWD" id="8FY-Je-OwE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RyW-NG-8iL"/>
+                    <navigationItem key="navigationItem" title="Layer Animation Cookbook" id="RyW-NG-8iL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pP-2d-NYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-280.80000000000001" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic Layer Animation View Controller-->
         <scene sceneID="LWe-nB-81k">
             <objects>
-                <viewController id="uRG-p5-LIR" sceneMemberID="viewController">
+                <viewController id="uRG-p5-LIR" customClass="BasicLayerAnimationViewController" customModule="AnimationCookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GzQ-xn-aTx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BUq-KL-435">
+                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egb-kt-AaW">
+                                        <rect key="frame" x="144" y="0.0" width="87" height="42"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biu-Qu-r3u">
+                                        <rect key="frame" x="120.5" y="94.5" width="134" height="42"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate Copy">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-rH-df5">
+                                        <rect key="frame" x="109" y="189" width="157" height="42"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate Delayed">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El6-X1-4Jl">
+                                        <rect key="frame" x="61" y="284" width="253" height="42"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate Fillmode Backwards">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QE5-MQ-LVP">
+                                        <rect key="frame" x="68" y="378.5" width="239" height="42"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate Fillmode Forwards">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzz-nE-A7I">
+                                        <rect key="frame" x="86.5" y="473" width="202" height="42"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate Fillmode Both">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hRT-za-bJr" firstAttribute="bottom" secondItem="BUq-KL-435" secondAttribute="bottom" constant="44" id="JQn-Zz-63Q"/>
+                            <constraint firstItem="BUq-KL-435" firstAttribute="top" secondItem="hRT-za-bJr" secondAttribute="top" constant="44" id="Zah-cN-nAl"/>
+                            <constraint firstItem="hRT-za-bJr" firstAttribute="trailing" secondItem="BUq-KL-435" secondAttribute="trailing" id="mUw-zL-dLj"/>
+                            <constraint firstItem="BUq-KL-435" firstAttribute="leading" secondItem="hRT-za-bJr" secondAttribute="leading" id="y3q-5t-TT6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hRT-za-bJr"/>
                     </view>
                     <navigationItem key="navigationItem" id="7R6-nd-hF9"/>
+                    <connections>
+                        <outlet property="buttonAnimate" destination="egb-kt-AaW" id="Sdh-16-h07"/>
+                        <outlet property="buttonAnimateCopy" destination="biu-Qu-r3u" id="oOe-x4-y8d"/>
+                        <outlet property="buttonAnimateDelayed" destination="1Fs-rH-df5" id="ZTv-i0-WgJ"/>
+                        <outlet property="buttonAnimateFillmodeBackwards" destination="El6-X1-4Jl" id="ZGj-gq-Iud"/>
+                        <outlet property="buttonAnimateFillmodeBoth" destination="nzz-nE-A7I" id="Ylk-Wp-LYS"/>
+                        <outlet property="buttonAnimateFillmodeForwards" destination="QE5-MQ-LVP" id="Y1b-IL-APg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HC-M9-oHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="468" y="116"/>
+            <point key="canvasLocation" x="468" y="115.59220389805098"/>
         </scene>
-        <!--View Controller-->
+        <!--Basic Layer Animation Properties View Controller-->
         <scene sceneID="M1X-8q-foT">
             <objects>
-                <viewController id="tXt-Dz-nRS" sceneMemberID="viewController">
+                <viewController id="tXt-Dz-nRS" customClass="BasicLayerAnimationPropertiesViewController" customModule="AnimationCookbook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PfX-fr-xuS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fu8-pb-u5f">
+                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRc-Gb-smI">
+                                        <rect key="frame" x="88" y="0.0" width="199" height="38"/>
+                                        <color key="backgroundColor" red="0.90901690719999995" green="0.2211642861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate backgroundColor">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUh-0l-VnV">
+                                        <rect key="frame" x="122" y="83" width="131" height="38"/>
+                                        <color key="backgroundColor" red="0.90901690719999995" green="0.2211642861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate opacity">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IGv-JF-VKb">
+                                        <rect key="frame" x="106" y="166" width="163.5" height="100.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80U-He-lop">
+                                                <rect key="frame" x="41.5" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" red="0.90901690719999995" green="0.2211642861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Y7X-FO-wKj"/>
+                                                    <constraint firstAttribute="height" constant="80" id="i7a-QB-Gn4"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animate borderWidth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9s-Nh-MS2">
+                                                <rect key="frame" x="0.0" y="80" width="163.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sH-jF-8S9">
+                                        <rect key="frame" x="121.5" y="311" width="132" height="38"/>
+                                        <color key="backgroundColor" red="0.90901690719999995" green="0.2211642861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Animate bounds">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovo-xK-xqP">
+                                        <rect key="frame" x="154.5" y="394" width="66" height="38"/>
+                                        <color key="backgroundColor" red="0.90901690719999995" green="0.2211642861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOr-uJ-Arc">
+                                        <rect key="frame" x="154.5" y="477" width="66" height="38"/>
+                                        <color key="backgroundColor" red="0.90901690719999995" green="0.2211642861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fu8-pb-u5f" firstAttribute="top" secondItem="Hei-xM-JVX" secondAttribute="top" constant="44" id="KAJ-C4-rKc"/>
+                            <constraint firstItem="Hei-xM-JVX" firstAttribute="trailing" secondItem="fu8-pb-u5f" secondAttribute="trailing" id="RBG-kz-nm7"/>
+                            <constraint firstItem="fu8-pb-u5f" firstAttribute="leading" secondItem="Hei-xM-JVX" secondAttribute="leading" id="j01-G0-30w"/>
+                            <constraint firstItem="Hei-xM-JVX" firstAttribute="bottom" secondItem="fu8-pb-u5f" secondAttribute="bottom" constant="44" id="sxX-7W-IV8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hei-xM-JVX"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonAnimateBorder" destination="80U-He-lop" id="MNw-pw-WJo"/>
+                        <outlet property="buttonAnimateBounds" destination="6sH-jF-8S9" id="hP2-Cc-e1Z"/>
+                        <outlet property="buttonAnimateColor" destination="qRc-Gb-smI" id="Qep-ms-HIz"/>
+                        <outlet property="buttonAnimateOpacity" destination="WUh-0l-VnV" id="XqD-eF-Rf4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBc-QX-QtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

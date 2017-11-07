@@ -11,6 +11,8 @@
 		0D07D0111FB0F2AD0042C3F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D07D00F1FB0F2AD0042C3F4 /* Main.storyboard */; };
 		0D07D0131FB0F2AD0042C3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D07D0121FB0F2AD0042C3F4 /* Assets.xcassets */; };
 		0D07D0161FB0F2AD0042C3F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D07D0141FB0F2AD0042C3F4 /* LaunchScreen.storyboard */; };
+		0D07D01F1FB10FA60042C3F4 /* BasicLayerAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D07D01E1FB10FA60042C3F4 /* BasicLayerAnimationViewController.swift */; };
+		0D07D0231FB1330B0042C3F4 /* BasicLayerAnimationPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D07D0221FB1330B0042C3F4 /* BasicLayerAnimationPropertiesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		0D07D0121FB0F2AD0042C3F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D07D0151FB0F2AD0042C3F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D07D0171FB0F2AD0042C3F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D07D01E1FB10FA60042C3F4 /* BasicLayerAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLayerAnimationViewController.swift; sourceTree = "<group>"; };
+		0D07D0221FB1330B0042C3F4 /* BasicLayerAnimationPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLayerAnimationPropertiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 		0D07D01D1FB1001D0042C3F4 /* Layer Animations */ = {
 			isa = PBXGroup;
 			children = (
+				0D07D01E1FB10FA60042C3F4 /* BasicLayerAnimationViewController.swift */,
+				0D07D0221FB1330B0042C3F4 /* BasicLayerAnimationPropertiesViewController.swift */,
 			);
 			path = "Layer Animations";
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D07D0231FB1330B0042C3F4 /* BasicLayerAnimationPropertiesViewController.swift in Sources */,
+				0D07D01F1FB10FA60042C3F4 /* BasicLayerAnimationViewController.swift in Sources */,
 				0D07D00C1FB0F2AD0042C3F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
