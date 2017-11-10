@@ -14,7 +14,9 @@ class BasicLayerAnimationPropertiesViewController: UIViewController {
     @IBOutlet weak var buttonAnimateOpacity: UIButton!
     @IBOutlet weak var buttonAnimateBorder: UIButton!
     @IBOutlet weak var buttonAnimateBounds: UIButton!
-    @IBOutlet weak var buttonAnimateRotate: UIButton!
+    @IBOutlet weak var buttonAnimateRotateZ: UIButton!
+    @IBOutlet weak var buttonAnimateRotateX: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,8 @@ class BasicLayerAnimationPropertiesViewController: UIViewController {
         basicAnimationColor.fillMode = kCAFillModeBoth
         basicAnimationColor.fromValue = UIColor.red.cgColor
         basicAnimationColor.toValue   = UIColor.black.cgColor
-        basicAnimationColor.duration  = 1.0
+        basicAnimationColor.duration  = 2.0
+        basicAnimationColor.repeatCount = 1e100
         
         buttonAnimateColor.backgroundColor = UIColor.black
         buttonAnimateColor.layer.add(basicAnimationColor, forKey: nil)
@@ -42,10 +45,10 @@ class BasicLayerAnimationPropertiesViewController: UIViewController {
         let basicAnimationOpacity  = CABasicAnimation(keyPath: "opacity")
         
         basicAnimationOpacity.fillMode = kCAFillModeBoth
-        basicAnimationOpacity.beginTime  = CACurrentMediaTime() + 1.0
         basicAnimationOpacity.fromValue = 0
         basicAnimationOpacity.toValue   = 1.0
-        basicAnimationOpacity.duration  = 1.0
+        basicAnimationOpacity.duration  = 2.0
+        basicAnimationOpacity.repeatCount = 1e100
     
         buttonAnimateOpacity.layer.add(basicAnimationOpacity, forKey: nil)
 
@@ -53,34 +56,44 @@ class BasicLayerAnimationPropertiesViewController: UIViewController {
         let basicAnimationBorder  = CABasicAnimation(keyPath: "borderWidth")
         
         basicAnimationBorder.fillMode = kCAFillModeBoth
-        basicAnimationBorder.beginTime  = CACurrentMediaTime() + 2.0
         basicAnimationBorder.fromValue = 20
         basicAnimationBorder.toValue   = 0
-        basicAnimationBorder.duration  = 1.0
+        basicAnimationBorder.duration  = 2.0
         basicAnimationBorder.repeatCount = 1e100
         
         buttonAnimateBorder.layer.borderColor = UIColor.white.cgColor
         buttonAnimateBorder.layer.add(basicAnimationBorder, forKey: nil)
     
-        // Animate borderWidth
+        // Animate bounds
         let basicAnimationBounds  = CABasicAnimation(keyPath: "bounds")
         
         basicAnimationBounds.fillMode = kCAFillModeBoth
-        basicAnimationBounds.beginTime  = CACurrentMediaTime() + 3.0
         basicAnimationBounds.fromValue = CGRect(x: 0, y: 0, width: 200, height: 100)
         basicAnimationBounds.toValue   = buttonAnimateBounds.bounds
-        basicAnimationBounds.duration  = 1.0
+        basicAnimationBounds.duration  = 2.0
+        basicAnimationBounds.repeatCount = 1e100
         
         buttonAnimateBounds.layer.add(basicAnimationBounds, forKey: nil)
         
-        // Animate Rotate
-        let basicAnimationRotate  = CABasicAnimation(keyPath: "transform.rotation.z")
+        // Animate rotate z
+        let basicAnimationRotateZ  = CABasicAnimation(keyPath: "transform.rotation.z")
         
-        basicAnimationRotate.fromValue = 0.0
-        basicAnimationRotate.toValue = ((360.0 * .pi) / 180.0)
-        basicAnimationRotate.duration = 2.0
-        basicAnimationRotate.repeatCount = 1e100
+        basicAnimationRotateZ.fromValue = 0.0
+        basicAnimationRotateZ.toValue = ((360.0 * .pi) / 180.0)
+        basicAnimationRotateZ.duration = 2.0
+        basicAnimationRotateZ.repeatCount = 1e100
         
-        buttonAnimateRotate.layer.add(basicAnimationRotate, forKey: nil)
+        buttonAnimateRotateZ.layer.add(basicAnimationRotateZ, forKey: nil)
+        
+        // Animate rotate x
+        let basicAnimationRotateX  = CABasicAnimation(keyPath: "transform.rotation.x")
+        
+        basicAnimationRotateX.fromValue = 0.0
+        basicAnimationRotateX.toValue = ((360.0 * .pi) / 180.0)
+        basicAnimationRotateX.duration = 2.0
+        basicAnimationRotateX.repeatCount = 1e100
+        
+        buttonAnimateRotateX.layer.add(basicAnimationRotateX, forKey: nil)
+        
     }
 }
