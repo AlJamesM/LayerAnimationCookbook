@@ -254,16 +254,15 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovo-xK-xqP">
-                                        <rect key="frame" x="154.5" y="394" width="66" height="38"/>
-                                        <color key="backgroundColor" red="0.90901690719999995" green="0.2211642861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="148" y="394" width="79" height="38"/>
+                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Rotate Z">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOr-uJ-Arc">
                                         <rect key="frame" x="154.5" y="477" width="66" height="38"/>
-                                        <color key="backgroundColor" red="0.90901690719999995" green="0.2211642861" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -286,6 +285,7 @@
                         <outlet property="buttonAnimateBounds" destination="6sH-jF-8S9" id="hP2-Cc-e1Z"/>
                         <outlet property="buttonAnimateColor" destination="qRc-Gb-smI" id="Qep-ms-HIz"/>
                         <outlet property="buttonAnimateOpacity" destination="WUh-0l-VnV" id="XqD-eF-Rf4"/>
+                        <outlet property="buttonAnimateRotate" destination="Ovo-xK-xqP" id="yf1-aa-9bg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBc-QX-QtL" userLabel="First Responder" sceneMemberID="firstResponder"/>

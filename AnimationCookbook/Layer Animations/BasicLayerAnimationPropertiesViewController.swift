@@ -14,6 +14,7 @@ class BasicLayerAnimationPropertiesViewController: UIViewController {
     @IBOutlet weak var buttonAnimateOpacity: UIButton!
     @IBOutlet weak var buttonAnimateBorder: UIButton!
     @IBOutlet weak var buttonAnimateBounds: UIButton!
+    @IBOutlet weak var buttonAnimateRotate: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class BasicLayerAnimationPropertiesViewController: UIViewController {
         basicAnimationBorder.fromValue = 20
         basicAnimationBorder.toValue   = 0
         basicAnimationBorder.duration  = 1.0
+        basicAnimationBorder.repeatCount = 1e100
         
         buttonAnimateBorder.layer.borderColor = UIColor.white.cgColor
         buttonAnimateBorder.layer.add(basicAnimationBorder, forKey: nil)
@@ -70,5 +72,15 @@ class BasicLayerAnimationPropertiesViewController: UIViewController {
         basicAnimationBounds.duration  = 1.0
         
         buttonAnimateBounds.layer.add(basicAnimationBounds, forKey: nil)
+        
+        // Animate Rotate
+        let basicAnimationRotate  = CABasicAnimation(keyPath: "transform.rotation.z")
+        
+        basicAnimationRotate.fromValue = 0.0
+        basicAnimationRotate.toValue = ((360.0 * .pi) / 180.0)
+        basicAnimationRotate.duration = 2.0
+        basicAnimationRotate.repeatCount = 1e100
+        
+        buttonAnimateRotate.layer.add(basicAnimationRotate, forKey: nil)
     }
 }
